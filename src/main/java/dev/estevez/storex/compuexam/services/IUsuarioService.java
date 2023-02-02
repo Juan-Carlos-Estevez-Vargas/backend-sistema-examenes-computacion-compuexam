@@ -8,9 +8,9 @@ import dev.estevez.storex.compuexam.entities.UsuarioRol;
 public interface IUsuarioService {
 
 	public Usuario guardarUsuario(Usuario usuario, Set<UsuarioRol> usuarioRoles);
-	
+
 	public Usuario obtenerUsuario(String username);
-	
+
 	public void eliminarUsuario(Long usuarioId);
-	
+
 }

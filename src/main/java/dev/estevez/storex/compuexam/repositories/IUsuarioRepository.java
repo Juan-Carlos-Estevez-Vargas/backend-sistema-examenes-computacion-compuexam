@@ -9,5 +9,5 @@ import dev.estevez.storex.compuexam.entities.Usuario;
 public interface IUsuarioRepository extends JpaRepository<Usuario, Long> {
 
 	public Usuario findByUsername(String username);
-	
+
 }

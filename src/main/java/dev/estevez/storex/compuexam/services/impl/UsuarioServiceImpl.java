@@ -12,30 +12,30 @@ import dev.estevez.storex.compuexam.repositories.IUsuarioRepository;
 import dev.estevez.storex.compuexam.services.IUsuarioService;
 
 @Service
-public class UsuarioServiceImpl implements IUsuarioService{
-	
+public class UsuarioServiceImpl implements IUsuarioService {
+
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
-	
+
 	@Autowired
 	private IRolRepository rolRepository;
 
 	@Override
 	public Usuario guardarUsuario(Usuario usuario, Set<UsuarioRol> usuarioRoles) {
 		Usuario usuarioLocal = usuarioRepository.findByUsername(usuario.getUsername());
-		
+
 		if (usuarioLocal != null) {
 			System.out.println("El usuario ya existe");
-			//throw new Exception("El usuario ya está presente");
+			// throw new Exception("El usuario ya está presente");
 		}
-		
-		for(UsuarioRol usuarioRol: usuarioRoles) {
+
+		for (UsuarioRol usuarioRol : usuarioRoles) {
 			rolRepository.save(usuarioRol.getRol());
 		}
-		
-		usuario.getUsuarioRoles().addAll(usuarioRoles);	
+
+		usuario.getUsuarioRoles().addAll(usuarioRoles);
 		usuarioLocal = usuarioRepository.save(usuario);
-		
+
 		return usuarioLocal;
 	}
 

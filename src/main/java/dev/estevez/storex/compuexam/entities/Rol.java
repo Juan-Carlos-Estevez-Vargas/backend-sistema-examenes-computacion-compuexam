@@ -21,11 +21,11 @@ import lombok.Setter;
 @Entity
 @Table(name = "tbl_roles")
 public class Rol {
-	
+
 	@Id
 	private Long rolId;
 	private String nombre;
-	
+
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "rol")
-	private Set<UsuarioRol> usuarioRoles = new HashSet<>(); 
+	private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 }
