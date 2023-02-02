@@ -5,7 +5,6 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dev.estevez.storex.compuexam.entities.Rol;
 import dev.estevez.storex.compuexam.entities.Usuario;
 import dev.estevez.storex.compuexam.entities.UsuarioRol;
 import dev.estevez.storex.compuexam.repositories.IRolRepository;
@@ -38,6 +37,16 @@ public class UsuarioServiceImpl implements IUsuarioService{
 		usuarioLocal = usuarioRepository.save(usuario);
 		
 		return usuarioLocal;
+	}
+
+	@Override
+	public Usuario obtenerUsuario(String username) {
+		return usuarioRepository.findByUsername(username);
+	}
+
+	@Override
+	public void eliminarUsuario(Long usuarioId) {
+		usuarioRepository.deleteById(usuarioId);
 	}
 
 }
