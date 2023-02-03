@@ -17,6 +17,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import dev.estevez.storex.compuexam.services.impl.UserDetailsServiceImpl;
 
+/**
+ * Clase de configuración de Spring Security y JWT.
+ * 
+ * @author Juan Carlos Estevez Vargas.
+ *
+ */
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)

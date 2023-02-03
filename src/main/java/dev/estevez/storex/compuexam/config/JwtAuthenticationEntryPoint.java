@@ -10,6 +10,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Entry Point para autenticar usuarios por medio de JWT.
+ * 
+ * @author Juan Carlos Estevez Vargas.
+ *
+ */
 @Component
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 

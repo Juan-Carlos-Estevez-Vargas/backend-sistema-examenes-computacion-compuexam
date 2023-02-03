@@ -18,6 +18,12 @@ import dev.estevez.storex.compuexam.entities.Usuario;
 import dev.estevez.storex.compuexam.entities.UsuarioRol;
 import dev.estevez.storex.compuexam.services.IUsuarioService;
 
+/**
+ * Controlador de tipo rest para el manejo y gestión de usuarios.
+ * 
+ * @author Juan Carlos Estevez Vargas.
+ *
+ */
 @RestController
 @RequestMapping("/usuarios")
 @CrossOrigin("*")
