@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Authority implements GrantedAuthority{
 	
+	private static final long serialVersionUID = 1L;
 	private String authority;
 
 	@Override
